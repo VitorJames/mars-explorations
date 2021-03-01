@@ -10,7 +10,7 @@
     >
       <img src="../assets/473346-PGQPSZ-396-ai.png" alt="">
     </v-avatar>
-      <v-toolbar-title>MARS <small class="text-uppercase font-weight-thin white--text">expeditions</small></v-toolbar-title>
+      <v-toolbar-title>MARS <small class="text-uppercase font-weight-thin white--text">EXPLORATIONS</small></v-toolbar-title>
       <!-- <v-spacer></v-spacer>
       <v-btn depressed color="error" class="mr-3">
         Fotos
