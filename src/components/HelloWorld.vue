@@ -110,7 +110,7 @@
                 cols="6"
                 md="3"
               >
-                <v-card>
+                <v-card style="cursor:pointer !important;">
                   <v-img
                     :src="img.img_src"
                     class="white--text align-end"
