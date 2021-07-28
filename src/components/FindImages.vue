@@ -1,46 +1,13 @@
 <template>
-  <v-app id="inspire">
-
-    <v-app-bar dark app>
-      <!-- <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon> -->
-      <v-avatar
-      color="deep-orange darken-3"
-      class="mr-3"
-      size="48"
-    >
-      <img src="../assets/473346-PGQPSZ-396-ai.png" alt="">
-    </v-avatar>
-      <v-toolbar-title>MARS <small class="text-uppercase font-weight-thin white--text">EXPLORATIONS</small></v-toolbar-title>
-      <!-- <v-spacer></v-spacer>
-      <v-btn depressed color="error" class="mr-3">
-        Fotos
-      </v-btn>
-      <v-btn depressed color="error" class="mr-3">
-        Missões
-      </v-btn>
-      <v-btn depressed color="error">
-        Robôs
-      </v-btn> -->
-    </v-app-bar>
-
-    <v-navigation-drawer
-      v-model="drawer"
-      fixed
-      temporary
-    >
-      <!--  -->
-    </v-navigation-drawer>
-
-    <v-main class="px-0 pt-7">
-      
-      <v-container>
+  <v-app>
+    <v-container>
         <v-row>
             <v-col
               class="mt-0"
               cols="12"
             >
               <v-card height="60" class="grey lighten-3 d-flex align-center">
-                  <v-col cols="2">
+                  <v-col cols="5" lg="2">
                     <v-menu
                       ref="menu"
                       v-model="menu"
@@ -84,7 +51,7 @@
                       </v-date-picker>
                     </v-menu>
                   </v-col>
-                  <v-col cols="2" class="pt-0">
+                  <v-col cols="5" lg="2" class="pt-0">
                     <v-select
                     class="mt-0"
                     v-model="rover"
@@ -98,6 +65,7 @@
                   </v-col>
                   <v-col cols="2">
                     <v-btn color="error" @click="search()">
+                      <v-icon>mdi-magnify</v-icon>
                       Pesquisar
                     </v-btn>
                   </v-col>
@@ -205,7 +173,6 @@
             </v-dialog>
         </v-row>
       </v-container>
-    </v-main>
     <div class="text-center ma-2">
       <v-snackbar
         v-model="snackbar"
@@ -226,7 +193,7 @@
     </div>
     <v-footer dark fixed padless>
       <v-card class="flex" flat tile>
-        <v-card-title>
+        <v-card-title class="py-0">
           <h5>&copy; {{ new Date().getFullYear() }} — <strong>Vitor James</strong></h5>
           <v-spacer></v-spacer>
           <v-btn class="mx-3" href="#" target="_blank" dark icon>
