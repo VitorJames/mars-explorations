@@ -1,73 +1,77 @@
 <template>
   <v-app>
-    <v-container>
-        <v-row>
+    <v-container fluid>
+        <v-row justify="center">
             <v-col
               class="mt-0"
               cols="12"
+              lg="8"
             >
-              <v-card height="60" class="grey lighten-3 d-flex align-center">
-                  <v-col cols="5" lg="2">
-                    <v-menu
-                      ref="menu"
-                      v-model="menu"
-                      :close-on-content-click="false"
-                      :return-value.sync="date"
-                      offset-y
-                      class="pa-0"
-                      min-width="auto"
-                    >
-                      <template v-slot:activator="{ on, attrs }">
-                        <v-text-field
-                          v-model="date"
-                          class="mt-3"
-                          prepend-icon="mdi-calendar"
-                          readonly
-                          v-bind="attrs"
-                          v-on="on"
-                        ></v-text-field>
-                      </template>
-                      <v-date-picker
-                        v-model="date"
-                        no-title
-                        scrollable
-                        locale="pt-br"
-                      >
-                        <v-spacer></v-spacer>
-                        <v-btn
-                          text
-                          color="primary"
-                          @click="menu = false"
+              <v-card class="grey lighten-3 d-flex align-center" light>
+                  <v-col cols="12">
+                    <v-row>
+                      <v-col cols="6" lg="5" sm="5">
+                        <v-menu
+                          ref="menu"
+                          v-model="menu"
+                          :close-on-content-click="false"
+                          :return-value.sync="date"
+                          offset-y
+                          class="pa-0"
+                          min-width="auto"
                         >
-                          Cancelar
+                          <template v-slot:activator="{ on, attrs }">
+                            <v-text-field
+                              v-model="date"
+                              prepend-icon="mdi-calendar"
+                              readonly
+                              v-bind="attrs"
+                              v-on="on"
+                              hide-details
+                              class="pt-0"
+                            ></v-text-field>
+                          </template>
+                          <v-date-picker
+                            v-model="date"
+                            no-title
+                            scrollable
+                            locale="pt-br"
+                          >
+                            <v-spacer></v-spacer>
+                            <v-btn
+                              text
+                              color="primary"
+                              @click="menu = false"
+                            >
+                              Cancelar
+                            </v-btn>
+                            <v-btn
+                              text
+                              color="primary"
+                              @click="$refs.menu.save(date);"
+                            >
+                              OK
+                            </v-btn>
+                          </v-date-picker>
+                        </v-menu>
+                      </v-col>
+                      <v-col cols="6" lg="5" sm="5" class="pt-0">
+                        <v-select
+                        v-model="rover"
+                        :items="rovers"
+                        menu-props="auto"
+                        label="Rover"
+                        hide-details
+                        prepend-icon="mdi-robot"
+                        single-line
+                      ></v-select>
+                      </v-col>
+                      <v-col cols="12" md="2" sm="2">
+                        <v-btn color="error"  block @click="search()">
+                          <v-icon>mdi-magnify</v-icon>
                         </v-btn>
-                        <v-btn
-                          text
-                          color="primary"
-                          @click="$refs.menu.save(date);"
-                        >
-                          OK
-                        </v-btn>
-                      </v-date-picker>
-                    </v-menu>
-                  </v-col>
-                  <v-col cols="5" lg="2" class="pt-0">
-                    <v-select
-                    class="mt-0"
-                    v-model="rover"
-                    :items="rovers"
-                    menu-props="auto"
-                    label="Robô"
-                    hide-details
-                    prepend-icon="mdi-robot"
-                    single-line
-                  ></v-select>
-                  </v-col>
-                  <v-col cols="2">
-                    <v-btn color="error" @click="search()">
-                      <v-icon>mdi-magnify</v-icon>
-                      Pesquisar
-                    </v-btn>
+                      </v-col>
+                    </v-row>
                   </v-col>
               </v-card>
             </v-col>
@@ -194,12 +198,13 @@
     <v-footer dark fixed padless>
       <v-card class="flex" flat tile>
         <v-card-title class="py-0">
-          <h5>&copy; {{ new Date().getFullYear() }} — <strong>Vitor James</strong></h5>
+          <h5>&copy; {{ new Date().getFullYear() }}</h5>
           <v-spacer></v-spacer>
-          <v-btn class="mx-3" href="#" target="_blank" dark icon>
-            <v-icon size="24px">
+          <v-btn href="https://www.linkedin.com/in/vitor-james2/" target="_blank" dark text>
+            <v-icon size="24px" class="mr-1">
               mdi-linkedin
             </v-icon>
+            Vitor James
           </v-btn>
         </v-card-title>
       </v-card>
