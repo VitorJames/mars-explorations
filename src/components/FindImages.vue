@@ -22,7 +22,7 @@
                         >
                           <template v-slot:activator="{ on, attrs }">
                             <v-text-field
-                              v-model="date"
+                              v-model="computedDateFormatted"
                               prepend-icon="mdi-calendar"
                               readonly
                               v-bind="attrs"
@@ -182,7 +182,7 @@
                 </v-card-text>
               </v-card>
             </v-dialog>
-        </v-row>
+          </v-row>
       </v-container>
     <div class="text-center ma-2">
       <v-snackbar
@@ -202,79 +202,6 @@
         </template>
       </v-snackbar>
     </div>
-    <v-snackbar
-      v-model="controls"
-      class="mb-10 pa-0"
-      rounded="pill"
-      elevation="20"
-      timeout="-1"
-    >
-      <v-col cols="12" class="pa-0">
-        <v-row>
-          <v-col cols="5" lg="5" sm="5">
-            <v-menu
-              ref="menu"
-              v-model="menu"
-              :close-on-content-click="false"
-              :return-value.sync="date"
-              offset-y
-              class="pa-0"
-              min-width="auto"
-            >
-              <template v-slot:activator="{ on, attrs }">
-                <v-text-field
-                  v-model="date"
-                  readonly
-                  v-bind="attrs"
-                  v-on="on"
-                  hide-details
-                  class="pt-0"
-                  color="error"
-                ></v-text-field>
-              </template>
-              <v-date-picker
-                v-model="date"
-                no-title
-                scrollable
-                locale="pt-br"
-              >
-                <v-spacer></v-spacer>
-                <v-btn
-                  text
-                  color="primary"
-                  @click="menu = false"
-                >
-                  Cancelar
-                </v-btn>
-                <v-btn
-                  text
-                  color="primary"
-                  @click="$refs.menu.save(date);"
-                >
-                  OK
-                </v-btn>
-              </v-date-picker>
-            </v-menu>
-          </v-col>
-          <v-col cols="5" lg="5" sm="5" class="pt-0">
-            <v-select
-            v-model="rover"
-            :items="rovers"
-            menu-props="auto"
-            label="Rover"
-            hide-details
-            single-line
-            color="error"
-          ></v-select>
-          </v-col>
-          <v-col cols="1" md="2" sm="2">
-            <v-btn color="error" small fab @click="search()">
-              <v-icon>mdi-magnify</v-icon>
-            </v-btn>
-          </v-col>
-        </v-row>
-      </v-col>
-    </v-snackbar>
     <v-footer dark fixed padless>
       <v-card class="flex" flat tile>
         <v-card-title class="py-0">
@@ -293,6 +220,7 @@
 </template>
 
 <script>
+import { format, parseISO } from 'date-fns'
   export default {
     data: () => ({ 
       drawer: null,
@@ -311,6 +239,11 @@
     }),
     created(){
       this.checkScroll();
+    },
+    computed: {
+      computedDateFormatted () {
+        return format(parseISO(this.date), "dd/MM/yyyy");
+      },
     },
     methods:{
       checkScroll(){
