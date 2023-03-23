@@ -6,9 +6,21 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    name: "Mars Explorations",
+    name: "Mars Explorations - Home",
     component: () =>
-      import("./../components/FindImages")
+      import("./../views/Home")
+  },
+  {
+    path: "/rovers",
+    name: "Mars Explorations - Rovers",
+    component: () =>
+      import("./../views/Rovers")
+  },
+  {
+    path: "/about",
+    name: "Mars Explorations - Sobre",
+    component: () =>
+      import("./../views/About")
   },
 ];
 

@@ -2,19 +2,20 @@
   <v-app>
     <AppBar />
     <v-main>
-      <FindImages />
+      <router-view />
     </v-main>
+    <Footer />
   </v-app>
 </template>
 
 <script>
-import FindImages from "./components/FindImages";
 import AppBar from "./components/AppBar";
+import Footer from "./components/Footer";
 
 export default {
   components: {
-    FindImages,
-    AppBar
+    AppBar,
+    Footer
   },
 
   data: () => ({
