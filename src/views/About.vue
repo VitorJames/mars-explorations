@@ -1,13 +1,8 @@
 <template>
   <v-container class="pb-12">
     <v-card>
-      <v-card-title class="text-justify">
-        Olá! Meu nome é Vitor James e gostaria de apresentar o meu projeto
-        pessoal: um site que reúne as imagens das missões de Marte, registradas
-        pelos rovers que estão explorando o Planeta Vermelho.
-      </v-card-title>
       <v-card-text class="text-sm-h6 text-justify">
-        O objetivo do meu projeto é oferecer ao público em geral a oportunidade
+        O objetivo desse projeto é oferecer ao público em geral a oportunidade
         de explorar e visualizar as incríveis paisagens de Marte, como nunca
         antes visto. As imagens registradas pelos rovers são verdadeiras obras
         de arte, que revelam a beleza e complexidade do planeta vizinho. Além de
