@@ -75,6 +75,8 @@
             </v-col>
           </v-card>
         </v-col>
+      </v-row>
+      <v-row justify="center">
         <template v-if="!loading && images.photos && images.photos.length > 0">
           <v-col
             v-for="img in images.photos"
