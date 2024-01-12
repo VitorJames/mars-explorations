@@ -7,14 +7,11 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
-  "engines": {
-    "node": "18.16.1"
-  },
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^1.6.5",
     "core-js": "^3.6.5",
     "date-fns": "^2.29.3",
-    "serve": "^11.3.2",
+    "serve": "^14.2.1",
     "vue": "^2.6.11",
     "vue-axios": "^3.2.4",
     "vue-moment": "^4.1.0",
@@ -23,11 +20,11 @@
     "vuex": "^3.4.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-babel": "^5.0.8",
+    "@vue/cli-plugin-eslint": "^5.0.8",
+    "@vue/cli-plugin-router": "^5.0.8",
     "@vue/cli-plugin-vuex": "~4.5.0",
-    "@vue/cli-service": "^4.5.11",
+    "@vue/cli-service": "^3.3.1",
     "@vue/eslint-config-prettier": "^6.0.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
