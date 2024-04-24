@@ -83,6 +83,7 @@
             :key="`${img.id}`"
             cols="6"
             md="3"
+            lg="3"
           >
             <v-card style="cursor: pointer !important">
               <v-img
