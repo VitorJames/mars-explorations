@@ -126,8 +126,8 @@
         <template v-if="!loading && !images.photos">
           <v-col cols="12" lg="6" md="6" sm="8" class="pt-10">
             <v-row class="text-h5 justify-center pb-10">Escolha uma data e um rover</v-row>
-            <v-row>
-              <v-img :src="require(`../assets/pic_${randomPicNumber}.png`)" contain></v-img>
+            <v-row class="justify-center">
+              <v-img max-width="50%" :src="require(`../assets/pic_${randomPicNumber}.png`)" contain></v-img>
             </v-row>
           </v-col>
         </template>
@@ -252,6 +252,10 @@ export default {
         },
         curiosity: {
           start: parseISO("2012-08-06"),
+          end: parseISO(new Date().toISOString().substr(0, 10)),
+        },
+        perseverance: {
+          start: parseISO("2021-02-18"),
           end: parseISO(new Date().toISOString().substr(0, 10)),
         },
       };
