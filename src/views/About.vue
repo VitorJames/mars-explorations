@@ -17,37 +17,12 @@
         espero que todos possam desfrutar dessa maravilha e sentir-se inspirados
         a continuar explorando o cosmos.
 
-        <b
-          >O site é uma iniciativa independente e está em constante atualização,
-          para garantir que as imagens mais recentes e as informações mais
-          relevantes sejam sempre compartilhadas com o público. Espero que você
-          goste do meu projeto e que ele inspire você a conhecer mais sobre o
-          universo. <br /><br />
-          Se você gostou do projeto e gostaria de ajudar a manter, pode enviar
-          qualquer valor para a chave PIX:</b
-        >
+        O site é uma iniciativa independente e está em constante atualização,
+        para garantir que as imagens mais recentes e as informações mais
+        relevantes sejam sempre compartilhadas com o público. Espero que você
+        goste do projeto e que ele inspire você a conhecer mais sobre o
+        universo. <br />
       </v-card-text>
-      <v-card-actions>
-        <v-card width="100%" elevation="0" outlined class="ma-2">
-          <v-card-text class="pa-1">
-            <v-col cols="12">
-              <v-row>
-                <v-col cols="12">
-                  <h4>Chave aleatória</h4>
-                </v-col>
-                <v-col cols="12">
-                  <h4>{{ pixKey }}</h4>
-                </v-col>
-                <v-col cols="12" xl="3" lg="3" md="3" sm="3">
-                  <v-btn color="primary" block @click="copyUrl()" ref="mylink"
-                    >{{ copyText }}</v-btn
-                  >
-                </v-col>
-              </v-row>
-            </v-col>
-          </v-card-text>
-        </v-card>
-      </v-card-actions>
     </v-card>
   </v-container>
 </template>
@@ -86,5 +61,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>
