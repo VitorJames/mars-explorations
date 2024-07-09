@@ -5,9 +5,7 @@
         O objetivo desse projeto é oferecer ao público em geral a oportunidade
         de explorar e visualizar as incríveis paisagens de Marte, como nunca
         antes visto. As imagens registradas pelos rovers são verdadeiras obras
-        de arte, que revelam a beleza e complexidade do planeta vizinho. Além de
-        apresentar as imagens, o site também traz informações sobre cada missão,
-        incluindo seus objetivos, resultados e descobertas mais importantes. É
+        de arte, que revelam a beleza e complexidade do planeta vizinho. É
         um lugar para aprender e se inspirar, para aqueles que são fascinados
         pelo universo e pela exploração espacial.
 
