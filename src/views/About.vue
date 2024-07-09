@@ -4,15 +4,14 @@
       <v-card-text class="text-sm-h6 text-justify">
         O objetivo desse projeto é oferecer ao público em geral a oportunidade
         de explorar e visualizar as incríveis paisagens de Marte, como nunca
-        antes visto. As imagens registradas pelos rovers são verdadeiras obras
-        de arte, que revelam a beleza e complexidade do planeta vizinho. É
-        um lugar para aprender e se inspirar, para aqueles que são fascinados
+        antes visto. As imagens de Marte capturadas pelos rovers têm sido uma das maiores
+        conquistas da exploração espacial nas últimas décadas, que revelam a beleza e complexidade do planeta vizinho. Aqui é
+        o lugar certo para aprender e se inspirar, para aqueles que são fascinados
         pelo universo e pela exploração espacial.
 
         <br /><br />
         As imagens de Marte capturadas pelos rovers têm sido uma das maiores
-        conquistas da exploração espacial nas últimas décadas. Com o meu site,
-        espero que todos possam desfrutar dessa maravilha e sentir-se inspirados
+        conquistas da exploração espacial nas últimas décadas. Esperamos que todos possam desfrutar desse projeto e sentir-se inspirados
         a continuar explorando o cosmos.
 
         O site é uma iniciativa independente e está em constante atualização,
